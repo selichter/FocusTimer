@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF68675F26648D49004DD518 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68675E26648D49004DD518 /* TimerView.swift */; };
+		DF68676026648D49004DD518 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68675E26648D49004DD518 /* TimerView.swift */; };
+		DF68676226648E04004DD518 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676126648E04004DD518 /* TimerViewModel.swift */; };
+		DF68676326648E04004DD518 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676126648E04004DD518 /* TimerViewModel.swift */; };
+		DF68676526648F28004DD518 /* TimerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676426648F28004DD518 /* TimerMode.swift */; };
+		DF68676626648F28004DD518 /* TimerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676426648F28004DD518 /* TimerMode.swift */; };
+		DF68676A26653E8B004DD518 /* TestTimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676926653E8B004DD518 /* TestTimeUtils.swift */; };
 		DF73E7C9265DE12D00E668B3 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73E7C8265DE12D00E668B3 /* Tests_iOS.swift */; };
 		DF73E7D4265DE12D00E668B3 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73E7D3265DE12D00E668B3 /* Tests_macOS.swift */; };
 		DF73E7D6265DE12D00E668B3 /* FocusTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73E7AD265DE12A00E668B3 /* FocusTimerApp.swift */; };
 		DF73E7D7265DE12D00E668B3 /* FocusTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73E7AD265DE12A00E668B3 /* FocusTimerApp.swift */; };
-		DF73E7D8265DE12D00E668B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73E7AE265DE12A00E668B3 /* ContentView.swift */; };
-		DF73E7D9265DE12D00E668B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73E7AE265DE12A00E668B3 /* ContentView.swift */; };
 		DF73E7DA265DE12D00E668B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF73E7AF265DE12D00E668B3 /* Assets.xcassets */; };
 		DF73E7DB265DE12D00E668B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF73E7AF265DE12D00E668B3 /* Assets.xcassets */; };
 		DF73E7F2265DE1D900E668B3 /* FocusTimerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73E7F1265DE1D900E668B3 /* FocusTimerUnitTests.swift */; };
+		DF75500B26653FD4004B2C6A /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676B26653EC6004DD518 /* TimeUtils.swift */; };
+		DF75500C26653FD5004B2C6A /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676B26653EC6004DD518 /* TimeUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF68675E26648D49004DD518 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		DF68676126648E04004DD518 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		DF68676426648F28004DD518 /* TimerMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMode.swift; sourceTree = "<group>"; };
+		DF68676926653E8B004DD518 /* TestTimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimeUtils.swift; sourceTree = "<group>"; };
+		DF68676B26653EC6004DD518 /* TimeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
 		DF73E7AD265DE12A00E668B3 /* FocusTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimerApp.swift; sourceTree = "<group>"; };
-		DF73E7AE265DE12A00E668B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF73E7AF265DE12D00E668B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF73E7B4265DE12D00E668B3 /* FocusTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF73E7B7265DE12D00E668B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,8 +129,11 @@
 			isa = PBXGroup;
 			children = (
 				DF73E7AD265DE12A00E668B3 /* FocusTimerApp.swift */,
-				DF73E7AE265DE12A00E668B3 /* ContentView.swift */,
 				DF73E7AF265DE12D00E668B3 /* Assets.xcassets */,
+				DF68675E26648D49004DD518 /* TimerView.swift */,
+				DF68676126648E04004DD518 /* TimerViewModel.swift */,
+				DF68676426648F28004DD518 /* TimerMode.swift */,
+				DF68676B26653EC6004DD518 /* TimeUtils.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -176,6 +190,7 @@
 			children = (
 				DF73E7F1265DE1D900E668B3 /* FocusTimerUnitTests.swift */,
 				DF73E7F3265DE1D900E668B3 /* Info.plist */,
+				DF68676926653E8B004DD518 /* TestTimeUtils.swift */,
 			);
 			path = FocusTimerUnitTests;
 			sourceTree = "<group>";
@@ -367,7 +382,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF73E7D8265DE12D00E668B3 /* ContentView.swift in Sources */,
+				DF68676526648F28004DD518 /* TimerMode.swift in Sources */,
+				DF75500C26653FD5004B2C6A /* TimeUtils.swift in Sources */,
+				DF68675F26648D49004DD518 /* TimerView.swift in Sources */,
+				DF68676226648E04004DD518 /* TimerViewModel.swift in Sources */,
 				DF73E7D6265DE12D00E668B3 /* FocusTimerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,7 +394,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF73E7D9265DE12D00E668B3 /* ContentView.swift in Sources */,
+				DF68676626648F28004DD518 /* TimerMode.swift in Sources */,
+				DF75500B26653FD4004B2C6A /* TimeUtils.swift in Sources */,
+				DF68676026648D49004DD518 /* TimerView.swift in Sources */,
+				DF68676326648E04004DD518 /* TimerViewModel.swift in Sources */,
 				DF73E7D7265DE12D00E668B3 /* FocusTimerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF73E7F2265DE1D900E668B3 /* FocusTimerUnitTests.swift in Sources */,
+				DF68676A26653E8B004DD518 /* TestTimeUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
