@@ -23,6 +23,7 @@
 		DF73E7F2265DE1D900E668B3 /* FocusTimerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73E7F1265DE1D900E668B3 /* FocusTimerUnitTests.swift */; };
 		DF75500B26653FD4004B2C6A /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676B26653EC6004DD518 /* TimeUtils.swift */; };
 		DF75500C26653FD5004B2C6A /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676B26653EC6004DD518 /* TimeUtils.swift */; };
+		DFD7AA56266AC56400130C82 /* TimerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7AA55266AC56400130C82 /* TimerViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		DF73E7EF265DE1D900E668B3 /* FocusTimerUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusTimerUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF73E7F1265DE1D900E668B3 /* FocusTimerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimerUnitTests.swift; sourceTree = "<group>"; };
 		DF73E7F3265DE1D900E668B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD7AA55266AC56400130C82 /* TimerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				DF73E7F1265DE1D900E668B3 /* FocusTimerUnitTests.swift */,
 				DF73E7F3265DE1D900E668B3 /* Info.plist */,
 				DF68676926653E8B004DD518 /* TestTimeUtils.swift */,
+				DFD7AA55266AC56400130C82 /* TimerViewModelTests.swift */,
 			);
 			path = FocusTimerUnitTests;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF73E7F2265DE1D900E668B3 /* FocusTimerUnitTests.swift in Sources */,
+				DFD7AA56266AC56400130C82 /* TimerViewModelTests.swift in Sources */,
 				DF68676A26653E8B004DD518 /* TestTimeUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

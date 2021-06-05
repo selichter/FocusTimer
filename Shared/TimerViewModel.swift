@@ -9,36 +9,28 @@ import Foundation
 import Combine
 
 class TimerViewModel: ObservableObject {
-    @Published var timeString: String = "25:00"
+//    does this need to be published
+    var totalTime: TimeInterval
     @Published var mode: TimerMode = .stopped
+    @Published var timeString: String
+    var timer: Timer?
     
-    var secondsRemaining: TimeInterval
-    var timerPublisher = Timer.publish(every: 1.0, on: .main, in: .common)
-    var timerCancellable: Cancellable?
-    var cancellables: Set<AnyCancellable> = []
-    
-
-    init(timerSeconds: TimeInterval) {
-        secondsRemaining = timerSeconds
-        
-        timerPublisher
-            .sink { [unowned self] timer in
-                self.secondsRemaining -= 1.0
-                self.timeString = formatTimeString(self.secondsRemaining)
-            }
-            .store(in: &cancellables)
+    init(timerSeconds: TimeInterval = 10.0) {
+        totalTime = timerSeconds
+        timeString = formatTimeString(timerSeconds)
     }
     
     func start() {
         mode = .running
-        timerCancellable = timerPublisher.connect()
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
+            self.totalTime -= 1
+            self.timeString = formatTimeString(self.totalTime)
+        }
     }
     
     func stop() {
         mode = .stopped
-        timerCancellable?.cancel()
+        timer?.invalidate()
     }
 
 }
-
-

@@ -22,4 +22,10 @@ class TimeUtilTests: XCTestCase {
         XCTAssertEqual(formattedTime, "00:54")
     }
     
+    func testFormatTimeStringFormatsTimeLessThanTenSeconds() {
+        let time: TimeInterval = 9.00
+        let formattedTime = formatTimeString(time)
+        XCTAssertEqual(formattedTime, "00:09")
+    }
+    
 }
