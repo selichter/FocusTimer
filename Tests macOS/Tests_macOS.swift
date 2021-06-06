@@ -13,13 +13,6 @@ class Tests_macOS: XCTestCase {
     override func setUpWithError() throws {
         app.launch()
     }
-
-    func testAppLoadsWithElements() throws {
-        let window = app.windows["FocusTimer"]
-        XCTAssert(window.staticTexts["Focus Time"].exists)
-        XCTAssert(window.staticTexts["25:00"].exists)
-        XCTAssert(window.buttons["Start"].exists)
-    }
     
     func testTappingStartButtonStartsTimer() {
         let window = app.windows["FocusTimer"]
