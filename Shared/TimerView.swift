@@ -22,38 +22,19 @@ struct TimerView: View {
                 }
             }
             .padding()
-            if vm.mode == .stopped {
-                Button(action: vm.start) {
-                    HStack {
-                        Image(systemName: "play.fill")
-                            .font(.system(size: 24, weight: .bold))
-                        Text("Start")
-                            .font(.largeTitle)
-                            .fontWeight(.semibold)
-                    }
-                }
-                .buttonStyle(PlainButtonStyle())
-                .padding()
-                .cornerRadius(40)
-            }
             
-            if vm.mode == .running {
-                Button(action: vm.stop) {
-                    HStack {
-                        Image(systemName: "stop.fill")
-                            .font(.system(size: 24, weight: .bold))
-                        Text("Stop")
-                            .font(.largeTitle)
-                            .fontWeight(.semibold)
-                    }
-                }
-                .buttonStyle(PlainButtonStyle())
-                .padding()
-                .cornerRadius(40)
-            }
+            switch vm.mode {
+            case .stopped:
+                PrimaryButton(action: vm.start,
+                              buttonText: "Start",
+                              imageName: "play.fill")
+            case .running:
+                PrimaryButton(action: vm.stop,
+                              buttonText: "Stop",
+                              imageName: "stop.fill")
             
+            }
         }
-
     }
 }
 

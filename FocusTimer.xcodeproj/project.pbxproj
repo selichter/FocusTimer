@@ -24,6 +24,8 @@
 		DF75500B26653FD4004B2C6A /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676B26653EC6004DD518 /* TimeUtils.swift */; };
 		DF75500C26653FD5004B2C6A /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676B26653EC6004DD518 /* TimeUtils.swift */; };
 		DFD7AA56266AC56400130C82 /* TimerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7AA55266AC56400130C82 /* TimerViewModelTests.swift */; };
+		DFD7AA5A266C6F5600130C82 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7AA59266C6F5600130C82 /* PrimaryButton.swift */; };
+		DFD7AA5B266C6F5600130C82 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7AA59266C6F5600130C82 /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,7 @@
 		DF73E7F1265DE1D900E668B3 /* FocusTimerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimerUnitTests.swift; sourceTree = "<group>"; };
 		DF73E7F3265DE1D900E668B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFD7AA55266AC56400130C82 /* TimerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModelTests.swift; sourceTree = "<group>"; };
+		DFD7AA59266C6F5600130C82 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 				DF68676126648E04004DD518 /* TimerViewModel.swift */,
 				DF68676426648F28004DD518 /* TimerMode.swift */,
 				DF68676B26653EC6004DD518 /* TimeUtils.swift */,
+				DFD7AA59266C6F5600130C82 /* PrimaryButton.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -385,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD7AA5A266C6F5600130C82 /* PrimaryButton.swift in Sources */,
 				DF68676526648F28004DD518 /* TimerMode.swift in Sources */,
 				DF75500C26653FD5004B2C6A /* TimeUtils.swift in Sources */,
 				DF68675F26648D49004DD518 /* TimerView.swift in Sources */,
@@ -397,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD7AA5B266C6F5600130C82 /* PrimaryButton.swift in Sources */,
 				DF68676626648F28004DD518 /* TimerMode.swift in Sources */,
 				DF75500B26653FD4004B2C6A /* TimeUtils.swift in Sources */,
 				DF68676026648D49004DD518 /* TimerView.swift in Sources */,

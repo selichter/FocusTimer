@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 class TimerViewModel: ObservableObject {
-//    does this need to be published
     var totalTime: TimeInterval
     @Published var mode: TimerMode = .stopped
     @Published var timeString: String

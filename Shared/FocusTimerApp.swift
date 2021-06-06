@@ -12,6 +12,7 @@ struct FocusTimerApp: App {
     var body: some Scene {
         WindowGroup {
             TimerView()
+                .frame(minWidth: 400, minHeight: 200)
         }
     }
 }
