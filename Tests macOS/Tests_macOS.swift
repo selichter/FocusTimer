@@ -16,9 +16,9 @@ class Tests_macOS: XCTestCase {
     
     func testTappingStartButtonStartsTimer() {
         let window = app.windows["FocusTimer"]
-        XCTAssert(window.staticTexts["25:00"].exists)
+        XCTAssert(window.staticTexts["00:05"].exists)
         window.buttons["Start"].click()
-        window.staticTexts["24:58"].waitForExistence(timeout: 2)
+        window.staticTexts["00:03"].waitForExistence(timeout: 2)
         XCTAssert(window.buttons["Stop"].exists)
     }
     
@@ -27,8 +27,23 @@ class Tests_macOS: XCTestCase {
         window.buttons["Start"].tap()
         sleep(2)
         window.buttons["Stop"].tap()
-        XCTAssert(window.staticTexts["24:58"].exists)
+        XCTAssert(window.staticTexts["00:03"].exists)
         sleep(1)
-        XCTAssert(window.staticTexts["24:58"].exists)
+        XCTAssert(window.staticTexts["00:03"].exists)
+    }
+    
+    func testBreakIsLoadedAfterWorkTimerCompletes() {
+        let window = app.windows["FocusTimer"]
+        XCTAssert(window.staticTexts["Get Started"].exists)
+        XCTAssert(app.staticTexts["00:05"].exists)
+        window.buttons["Start"].tap()
+        XCTAssert(window.buttons["Stop"].exists)
+        sleep(6)
+        XCTAssert(window.staticTexts["00:03"].exists)
+        XCTAssert(window.buttons["Start"].exists)
+        window.buttons["Start"].tap()
+        XCTAssert(window.buttons["Stop"].exists)
+        XCTAssert(window.staticTexts["Take a Break"].exists)
+        
     }
 }

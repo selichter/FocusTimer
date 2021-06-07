@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct TimerView: View {
-    @StateObject private var vm = TimerViewModel(timerSeconds: 1500.00)
+    @StateObject private var vm = TimerViewModel()
 
     var body: some View {
         VStack {
             HStack(spacing: 40) {
                 VStack(alignment: .leading) {
-                    Text("Focus Time")
+                    Text(vm.timerHeading)
                         .font(.caption)
                     Text(vm.timeString)
                         .font(.system(size: 64, weight: .bold))
