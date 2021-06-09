@@ -44,6 +44,5 @@ class Tests_macOS: XCTestCase {
         window.buttons["Start"].tap()
         XCTAssert(window.buttons["Stop"].exists)
         XCTAssert(window.staticTexts["Take a Break"].exists)
-        
     }
 }

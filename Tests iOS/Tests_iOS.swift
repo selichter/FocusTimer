@@ -42,7 +42,6 @@ class Tests_iOS: XCTestCase {
         app.buttons["Start"].tap()
         XCTAssert(app.buttons["Stop"].exists)
         XCTAssert(app.staticTexts["Take a Break"].exists)
-        
     }
 
 }

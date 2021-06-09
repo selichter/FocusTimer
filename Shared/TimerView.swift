@@ -12,6 +12,16 @@ struct TimerView: View {
 
     var body: some View {
         VStack {
+            NavigationView {
+                        HStack {
+                            NavigationLink(destination: SettingsView()) {
+                                Image(systemName: "gearshape.fill")
+                                                        .font(.system(size: 24,
+                                                                      weight: .bold))
+                            }
+                        }
+                    }
+
             HStack(spacing: 40) {
                 VStack(alignment: .leading) {
                     Text(vm.timerHeading)

@@ -23,6 +23,10 @@
 		DF73E7F2265DE1D900E668B3 /* FocusTimerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73E7F1265DE1D900E668B3 /* FocusTimerUnitTests.swift */; };
 		DF75500B26653FD4004B2C6A /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676B26653EC6004DD518 /* TimeUtils.swift */; };
 		DF75500C26653FD5004B2C6A /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676B26653EC6004DD518 /* TimeUtils.swift */; };
+		DFC0A555266FEA7F00CE3D78 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0A554266FEA7F00CE3D78 /* SettingsView.swift */; };
+		DFC0A556266FEA7F00CE3D78 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0A554266FEA7F00CE3D78 /* SettingsView.swift */; };
+		DFC0A559266FEF4800CE3D78 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0A558266FEF4800CE3D78 /* SettingsViewModel.swift */; };
+		DFC0A55A266FEF4800CE3D78 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0A558266FEF4800CE3D78 /* SettingsViewModel.swift */; };
 		DFD7AA56266AC56400130C82 /* TimerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7AA55266AC56400130C82 /* TimerViewModelTests.swift */; };
 		DFD7AA5A266C6F5600130C82 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7AA59266C6F5600130C82 /* PrimaryButton.swift */; };
 		DFD7AA5B266C6F5600130C82 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD7AA59266C6F5600130C82 /* PrimaryButton.swift */; };
@@ -74,6 +78,8 @@
 		DF73E7EF265DE1D900E668B3 /* FocusTimerUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusTimerUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF73E7F1265DE1D900E668B3 /* FocusTimerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimerUnitTests.swift; sourceTree = "<group>"; };
 		DF73E7F3265DE1D900E668B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFC0A554266FEA7F00CE3D78 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DFC0A558266FEF4800CE3D78 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		DFD7AA55266AC56400130C82 /* TimerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModelTests.swift; sourceTree = "<group>"; };
 		DFD7AA59266C6F5600130C82 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +139,7 @@
 		DF73E7AC265DE12A00E668B3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DFC0A557266FEF2900CE3D78 /* Settings */,
 				DF73E7AD265DE12A00E668B3 /* FocusTimerApp.swift */,
 				DF73E7AF265DE12D00E668B3 /* Assets.xcassets */,
 				DF68675E26648D49004DD518 /* TimerView.swift */,
@@ -200,6 +207,15 @@
 				DFD7AA55266AC56400130C82 /* TimerViewModelTests.swift */,
 			);
 			path = FocusTimerUnitTests;
+			sourceTree = "<group>";
+		};
+		DFC0A557266FEF2900CE3D78 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DFC0A554266FEA7F00CE3D78 /* SettingsView.swift */,
+				DFC0A558266FEF4800CE3D78 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,12 +405,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC0A555266FEA7F00CE3D78 /* SettingsView.swift in Sources */,
 				DFD7AA5A266C6F5600130C82 /* PrimaryButton.swift in Sources */,
 				DF68676526648F28004DD518 /* TimerMode.swift in Sources */,
 				DF75500C26653FD5004B2C6A /* TimeUtils.swift in Sources */,
 				DF68675F26648D49004DD518 /* TimerView.swift in Sources */,
 				DF68676226648E04004DD518 /* TimerViewModel.swift in Sources */,
 				DF73E7D6265DE12D00E668B3 /* FocusTimerApp.swift in Sources */,
+				DFC0A559266FEF4800CE3D78 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,12 +420,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC0A556266FEA7F00CE3D78 /* SettingsView.swift in Sources */,
 				DFD7AA5B266C6F5600130C82 /* PrimaryButton.swift in Sources */,
 				DF68676626648F28004DD518 /* TimerMode.swift in Sources */,
 				DF75500B26653FD4004B2C6A /* TimeUtils.swift in Sources */,
 				DF68676026648D49004DD518 /* TimerView.swift in Sources */,
 				DF68676326648E04004DD518 /* TimerViewModel.swift in Sources */,
 				DF73E7D7265DE12D00E668B3 /* FocusTimerApp.swift in Sources */,
+				DFC0A55A266FEF4800CE3D78 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
