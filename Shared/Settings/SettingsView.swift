@@ -8,42 +8,50 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var vm = SettingsViewModel()
+    @StateObject private var vm = SettingsViewModel()
     let formatter = NumberFormatter()
+    
     
     var body: some View {
         
         
-        VStack(alignment: .leading, spacing: 15) {
+        Form {
             Text("Configure Your Timer")
                 .bold()
             
             HStack {
-                Text("Focus Time:")
+                Text("Focus Time in Minutes:")
                     .bold()
-                Text("\(vm.workTime) Minutes")
                 
-                TextField(vm.workTime,
-                          value: vm.workTime,
+                TextField("\(vm.workTime)",
+                          value: $vm.workTime,
                           formatter: formatter)
-
+                    .keyboardType(.numberPad)
+                    
             }
             
             HStack {
-                Text("Break Time:")
+                Text("Break Time in Minutes:")
                     .bold()
-                Text("\(vm.breakTime) Minutes")
+                TextField("\(vm.breakTime)",
+                          value: $vm.breakTime,
+                          formatter: formatter)
+                    .keyboardType(.numberPad)
             }
             
             HStack {
                 Text("Number of Rounds:")
                     .bold()
-                Text("\(vm.numberOfRounds)")
+                TextField("\(vm.numberOfRounds)",
+                          value: $vm.numberOfRounds,
+                          formatter: formatter)
+                    .keyboardType(.numberPad)
             }
         }
         
     }
 }
+
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {

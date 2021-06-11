@@ -9,47 +9,92 @@ import SwiftUI
 
 struct TimerView: View {
     @StateObject private var vm = TimerViewModel()
+    @State private var showSettingsView = false
 
     var body: some View {
-        VStack {
-            NavigationView {
-                        HStack {
-                            NavigationLink(destination: SettingsView()) {
-                                Image(systemName: "gearshape.fill")
-                                                        .font(.system(size: 24,
-                                                                      weight: .bold))
-                            }
-                        }
+        
+        NavigationView {
+#if targetEnvironment(macCatalyst)
+            VStack {
+                NavigationLink(destination: SettingsView(),
+                               isActive: self.$showSettingsView) {
+                    EmptyView()
+                        .frame(width: 0, height: 0)
+                        .disabled(true)
+                }
+                HStack(spacing: 40) {
+                    VStack(alignment: .leading) {
+                        Text(vm.timerHeading)
+                            .font(.caption)
+                        Text(vm.timeString)
+                            .font(.system(size: 64, weight: .bold))
+                            .fontWeight(.bold)
                     }
-
-            HStack(spacing: 40) {
-                VStack(alignment: .leading) {
-                    Text(vm.timerHeading)
-                        .font(.caption)
-                    Text(vm.timeString)
-                        .font(.system(size: 64, weight: .bold))
-                        .fontWeight(.bold)
+                }
+                .padding()
+                
+                switch vm.mode {
+                case .stopped:
+                    PrimaryButton(action: vm.start,
+                                  buttonText: "Start",
+                                  imageName: "play.fill")
+                case .running:
+                    PrimaryButton(action: vm.stop,
+                                  buttonText: "Stop",
+                                  imageName: "stop.fill")
+                
                 }
             }
-            .padding()
             
-            switch vm.mode {
-            case .stopped:
-                PrimaryButton(action: vm.start,
-                              buttonText: "Start",
-                              imageName: "play.fill")
-            case .running:
-                PrimaryButton(action: vm.stop,
-                              buttonText: "Stop",
-                              imageName: "stop.fill")
+#else
+            VStack {
+                NavigationLink(destination: SettingsView(),
+                               isActive: self.$showSettingsView) {
+                    EmptyView()
+                        .frame(width: 0, height: 0)
+                        .disabled(true)
+                }
+                HStack(spacing: 40) {
+                    VStack(alignment: .leading) {
+                        Text(vm.timerHeading)
+                            .font(.caption)
+                        Text(vm.timeString)
+                            .font(.system(size: 64, weight: .bold))
+                            .fontWeight(.bold)
+                    }
+                }
+                .padding()
+                
+                switch vm.mode {
+                case .stopped:
+                    PrimaryButton(action: vm.start,
+                                  buttonText: "Start",
+                                  imageName: "play.fill")
+                case .running:
+                    PrimaryButton(action: vm.stop,
+                                  buttonText: "Stop",
+                                  imageName: "stop.fill")
+                
+                }
+            }.navigationBarItems(trailing: Button(action: { self.showSettingsView = true },
+                                                  label: {Image(systemName: "gearshape.fill")}
+                                                 )
+                   )
+#endif
             
-            }
+            
+            
+
+
         }
+       
     }
 }
+
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
         TimerView()
     }
 }
+
