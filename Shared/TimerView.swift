@@ -12,82 +12,36 @@ struct TimerView: View {
     @State private var showSettingsView = false
 
     var body: some View {
-        
-        NavigationView {
-#if targetEnvironment(macCatalyst)
-            VStack {
-                NavigationLink(destination: SettingsView(),
-                               isActive: self.$showSettingsView) {
-                    EmptyView()
-                        .frame(width: 0, height: 0)
-                        .disabled(true)
-                }
-                HStack(spacing: 40) {
-                    VStack(alignment: .leading) {
-                        Text(vm.timerHeading)
-                            .font(.caption)
-                        Text(vm.timeString)
-                            .font(.system(size: 64, weight: .bold))
-                            .fontWeight(.bold)
-                    }
-                }
-                .padding()
-                
-                switch vm.mode {
-                case .stopped:
-                    PrimaryButton(action: vm.start,
-                                  buttonText: "Start",
-                                  imageName: "play.fill")
-                case .running:
-                    PrimaryButton(action: vm.stop,
-                                  buttonText: "Stop",
-                                  imageName: "stop.fill")
-                
+        VStack {
+            NavigationLink(destination: SettingsView(),
+                           isActive: self.$showSettingsView) {
+                EmptyView()
+                    .frame(width: 0, height: 0)
+                    .disabled(true)
+            }
+            HStack(spacing: 40) {
+                VStack(alignment: .leading) {
+                    Text(vm.timerHeading)
+                        .font(.caption)
+                    Text(vm.timeString)
+                        .font(.system(size: 64, weight: .bold))
+                        .fontWeight(.bold)
                 }
             }
+            .padding()
             
-#else
-            VStack {
-                NavigationLink(destination: SettingsView(),
-                               isActive: self.$showSettingsView) {
-                    EmptyView()
-                        .frame(width: 0, height: 0)
-                        .disabled(true)
-                }
-                HStack(spacing: 40) {
-                    VStack(alignment: .leading) {
-                        Text(vm.timerHeading)
-                            .font(.caption)
-                        Text(vm.timeString)
-                            .font(.system(size: 64, weight: .bold))
-                            .fontWeight(.bold)
-                    }
-                }
-                .padding()
-                
-                switch vm.mode {
-                case .stopped:
-                    PrimaryButton(action: vm.start,
-                                  buttonText: "Start",
-                                  imageName: "play.fill")
-                case .running:
-                    PrimaryButton(action: vm.stop,
-                                  buttonText: "Stop",
-                                  imageName: "stop.fill")
-                
-                }
-            }.navigationBarItems(trailing: Button(action: { self.showSettingsView = true },
-                                                  label: {Image(systemName: "gearshape.fill")}
-                                                 )
-                   )
-#endif
+            switch vm.mode {
+            case .stopped:
+                PrimaryButton(action: vm.start,
+                              buttonText: "Start",
+                              imageName: "play.fill")
+            case .running:
+                PrimaryButton(action: vm.stop,
+                              buttonText: "Stop",
+                              imageName: "stop.fill")
             
-            
-            
-
-
+            }
         }
-       
     }
 }
 

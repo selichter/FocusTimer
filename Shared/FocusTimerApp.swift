@@ -11,8 +11,12 @@ import SwiftUI
 struct FocusTimerApp: App {
     var body: some Scene {
         WindowGroup {
+        #if os(iOS)
+            TimerContainer()
+        #else
             TimerView()
                 .frame(minWidth: 400, minHeight: 200)
+        #endif
         }
     }
 }

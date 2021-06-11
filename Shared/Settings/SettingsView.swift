@@ -14,7 +14,6 @@ struct SettingsView: View {
     
     var body: some View {
         
-        
         Form {
             Text("Configure Your Timer")
                 .bold()
@@ -22,10 +21,10 @@ struct SettingsView: View {
             HStack {
                 Text("Focus Time in Minutes:")
                     .bold()
-                
-                TextField("\(vm.workTime)",
+                TextField("Focus Time in Minutes",
                           value: $vm.workTime,
                           formatter: formatter)
+                    .accessibility(identifier: "Focus Time in Minutes")
                     .keyboardType(.numberPad)
                     
             }
@@ -33,7 +32,7 @@ struct SettingsView: View {
             HStack {
                 Text("Break Time in Minutes:")
                     .bold()
-                TextField("\(vm.breakTime)",
+                TextField("Break Time in Minutes",
                           value: $vm.breakTime,
                           formatter: formatter)
                     .keyboardType(.numberPad)
@@ -42,11 +41,13 @@ struct SettingsView: View {
             HStack {
                 Text("Number of Rounds:")
                     .bold()
-                TextField("\(vm.numberOfRounds)",
+                TextField("Number of Rounds",
                           value: $vm.numberOfRounds,
                           formatter: formatter)
+                    .accessibility(identifier: "Number of Rounds")
                     .keyboardType(.numberPad)
             }
+            
         }
         
     }
