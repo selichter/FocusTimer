@@ -25,7 +25,6 @@ struct SettingsView: View {
                           value: $vm.workTime,
                           formatter: formatter)
                     .accessibility(identifier: "Focus Time in Minutes")
-                    .keyboardType(.numberPad)
                     
             }
             
@@ -35,7 +34,6 @@ struct SettingsView: View {
                 TextField("Break Time in Minutes",
                           value: $vm.breakTime,
                           formatter: formatter)
-                    .keyboardType(.numberPad)
             }
             
             HStack {
@@ -45,7 +43,6 @@ struct SettingsView: View {
                           value: $vm.numberOfRounds,
                           formatter: formatter)
                     .accessibility(identifier: "Number of Rounds")
-                    .keyboardType(.numberPad)
             }
             
         }
