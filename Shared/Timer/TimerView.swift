@@ -13,12 +13,6 @@ struct TimerView: View {
 
     var body: some View {
         VStack {
-            NavigationLink(destination: SettingsView(),
-                           isActive: self.$showSettingsView) {
-                EmptyView()
-                    .frame(width: 0, height: 0)
-                    .disabled(true)
-            }
             HStack(spacing: 40) {
                 VStack(alignment: .leading) {
                     Text(vm.timerHeading)

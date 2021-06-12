@@ -14,8 +14,10 @@ struct FocusTimerApp: App {
         #if os(iOS)
             TimerContainer()
         #else
-            TimerView()
-                .frame(minWidth: 400, minHeight: 200)
+            NavigationView {
+                SidebarView()
+            }
+            .frame(minWidth: 400, minHeight: 200)
         #endif
         }
     }
