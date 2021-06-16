@@ -22,7 +22,6 @@
 		DF73E7F2265DE1D900E668B3 /* FocusTimerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF73E7F1265DE1D900E668B3 /* FocusTimerUnitTests.swift */; };
 		DF75500B26653FD4004B2C6A /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676B26653EC6004DD518 /* TimeUtils.swift */; };
 		DF75500C26653FD5004B2C6A /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68676B26653EC6004DD518 /* TimeUtils.swift */; };
-		DF7729872672F7B900532FE3 /* TimerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7729862672F7B900532FE3 /* TimerContainer.swift */; };
 		DF77298D2673B2DF00532FE3 /* SettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF77298C2673B2DF00532FE3 /* SettingsUITests.swift */; };
 		DF7729902675402E00532FE3 /* TimerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF77298F2675402E00532FE3 /* TimerType.swift */; };
 		DF7729912675402E00532FE3 /* TimerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF77298F2675402E00532FE3 /* TimerType.swift */; };
@@ -38,6 +37,8 @@
 		DF7729A426755BA900532FE3 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7729A226755BA900532FE3 /* SidebarView.swift */; };
 		DF7729A72675648200532FE3 /* NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7729A62675648200532FE3 /* NavigationUITests.swift */; };
 		DF7729A92675682900532FE3 /* SettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7729A82675682900532FE3 /* SettingsUITests.swift */; };
+		DF7729AB2679999800532FE3 /* TabNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7729AA2679999800532FE3 /* TabNav.swift */; };
+		DF7729AC2679999800532FE3 /* TabNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7729AA2679999800532FE3 /* TabNav.swift */; };
 		DFC0A555266FEA7F00CE3D78 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0A554266FEA7F00CE3D78 /* SettingsView.swift */; };
 		DFC0A559266FEF4800CE3D78 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0A558266FEF4800CE3D78 /* SettingsViewModel.swift */; };
 		DFC0A55A266FEF4800CE3D78 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC0A558266FEF4800CE3D78 /* SettingsViewModel.swift */; };
@@ -92,7 +93,6 @@
 		DF73E7EF265DE1D900E668B3 /* FocusTimerUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FocusTimerUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF73E7F1265DE1D900E668B3 /* FocusTimerUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusTimerUnitTests.swift; sourceTree = "<group>"; };
 		DF73E7F3265DE1D900E668B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF7729862672F7B900532FE3 /* TimerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerContainer.swift; sourceTree = "<group>"; };
 		DF7729882672FA1800532FE3 /* FocusTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FocusTimer.entitlements; sourceTree = "<group>"; };
 		DF77298C2673B2DF00532FE3 /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
 		DF77298F2675402E00532FE3 /* TimerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerType.swift; sourceTree = "<group>"; };
@@ -102,6 +102,7 @@
 		DF7729A226755BA900532FE3 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		DF7729A62675648200532FE3 /* NavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITests.swift; sourceTree = "<group>"; };
 		DF7729A82675682900532FE3 /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
+		DF7729AA2679999800532FE3 /* TabNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNav.swift; sourceTree = "<group>"; };
 		DFC0A554266FEA7F00CE3D78 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DFC0A558266FEF4800CE3D78 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		DFD7AA55266AC56400130C82 /* TimerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModelTests.swift; sourceTree = "<group>"; };
@@ -164,8 +165,6 @@
 		DF73E7AC265DE12A00E668B3 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				DF77299F26755B7100532FE3 /* Screen.swift */,
-				DF7729A226755BA900532FE3 /* SidebarView.swift */,
 				DF7729A526755E8300532FE3 /* Navigation */,
 				DF7729982675409300532FE3 /* ReusableViews */,
 				DF77298E26753C4400532FE3 /* Timer */,
@@ -192,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				DF73E7B7265DE12D00E668B3 /* Info.plist */,
-				DF7729862672F7B900532FE3 /* TimerContainer.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -263,6 +261,9 @@
 		DF7729A526755E8300532FE3 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				DF77299F26755B7100532FE3 /* Screen.swift */,
+				DF7729A226755BA900532FE3 /* SidebarView.swift */,
+				DF7729AA2679999800532FE3 /* TabNav.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -471,9 +472,9 @@
 				DF75500C26653FD5004B2C6A /* TimeUtils.swift in Sources */,
 				DF68675F26648D49004DD518 /* TimerView.swift in Sources */,
 				DF68676226648E04004DD518 /* TimerViewModel.swift in Sources */,
-				DF7729872672F7B900532FE3 /* TimerContainer.swift in Sources */,
 				DF7729A326755BA900532FE3 /* SidebarView.swift in Sources */,
 				DF7729962675406200532FE3 /* FocusTimer.swift in Sources */,
+				DF7729AB2679999800532FE3 /* TabNav.swift in Sources */,
 				DF7729902675402E00532FE3 /* TimerType.swift in Sources */,
 				DF73E7D6265DE12D00E668B3 /* FocusTimerApp.swift in Sources */,
 				DFC0A559266FEF4800CE3D78 /* SettingsViewModel.swift in Sources */,
@@ -489,6 +490,7 @@
 				DF68676626648F28004DD518 /* TimerMode.swift in Sources */,
 				DF7729972675406200532FE3 /* FocusTimer.swift in Sources */,
 				DF7729942675404C00532FE3 /* TimerStatus.swift in Sources */,
+				DF7729AC2679999800532FE3 /* TabNav.swift in Sources */,
 				DF75500B26653FD4004B2C6A /* TimeUtils.swift in Sources */,
 				DF68676326648E04004DD518 /* TimerViewModel.swift in Sources */,
 				DF73E7D7265DE12D00E668B3 /* FocusTimerApp.swift in Sources */,

@@ -12,7 +12,7 @@ struct FocusTimerApp: App {
     var body: some Scene {
         WindowGroup {
         #if os(iOS)
-            TimerContainer()
+            TabNav()
         #else
             NavigationView {
                 SidebarView()
