@@ -12,7 +12,7 @@ class SettingsUITests: XCTestCase {
     
     override func setUpWithError() throws {
         app.launch()
-        app.buttons["gearshape.fill"].tap()
+        app.tabBars.buttons["Settings"].tap()
     }
     
     func testNavigateToSettingsView() {

@@ -49,7 +49,7 @@ class TimerViewModelTests: XCTestCase {
         XCTAssertEqual(timerViewModel.round.count, 3)
         XCTAssertEqual(timerViewModel.round.first?.secondsRemaining, 5)
         XCTAssertEqual(timerViewModel.round.first?.type, .work)
-        XCTAssertEqual(timerViewModel.round.first?.status, .inProgress)
+        XCTAssertEqual(timerViewModel.round.first?.status, .pending)
         
         timerViewModel.advanceTimer()
         
