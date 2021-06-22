@@ -37,7 +37,6 @@ class TimerViewModel: ObservableObject {
                 self.stop()
                 self.advanceTimer()
             }
-            
         }
     }
     
