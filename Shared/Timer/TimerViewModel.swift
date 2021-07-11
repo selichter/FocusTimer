@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import AVFoundation
 
 class TimerViewModel: ObservableObject {
     
@@ -42,6 +43,7 @@ class TimerViewModel: ObservableObject {
     
     func stop() {
         mode = .stopped
+        AudioServicesPlaySystemSound(1016)
         timer?.invalidate()
     }
     
