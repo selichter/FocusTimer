@@ -43,7 +43,9 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView()
+        TimerView(vm: TimerViewModel(workTime: 5,
+                                     breakTime: 3,
+                                     numOfRounds: 3))
     }
 }
 
