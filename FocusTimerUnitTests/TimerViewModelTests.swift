@@ -14,7 +14,7 @@ class TimerViewModelTests: XCTestCase {
     var cancellables: Set<AnyCancellable>!
 
     override func setUp() {
-        timerViewModel = TimerViewModel()
+        timerViewModel = TimerViewModel(workTime: 5, breakTime: 3, numOfRounds: 3)
         timerViewModel.round = [FocusTimer(type: .work, secondsRemaining: 5, status: .pending),
                                 FocusTimer(type: .rest, secondsRemaining: 3, status: .pending),
                                 FocusTimer(type: .work, secondsRemaining: 5, status: .pending)

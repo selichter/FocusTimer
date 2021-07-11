@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TimerView: View {
-    @StateObject private var vm = TimerViewModel()
+    @EnvironmentObject var timerSettings: SettingsConfig
+    @StateObject var vm: TimerViewModel
     @State private var showSettingsView = false
 
     var body: some View {
