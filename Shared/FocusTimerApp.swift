@@ -13,12 +13,16 @@ struct FocusTimerApp: App {
         WindowGroup {
         #if os(iOS)
             TabNav()
+                .environmentObject(SettingsConfig())
+
         #else
             NavigationView {
                 SidebarView()
             }
+            .environmentObject(SettingsConfig())
             .frame(minWidth: 400, minHeight: 200)
         #endif
         }
     }
 }
+    

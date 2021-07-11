@@ -14,7 +14,7 @@ class NavigationUITests: XCTestCase {
     override func setUpWithError() throws {
         app.launch()
     }
-    
+
     func testSidebarDisplaysNavList() {
         let window = app.windows["FocusTimer"]
         XCTAssert(window.staticTexts["Get Started"].exists)

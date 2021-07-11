@@ -6,10 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 
-class SettingsViewModel: ObservableObject {
+class SettingsConfig: ObservableObject {
     @Published var numberOfRounds = 3
     @Published var workTime = 25
     @Published var breakTime = 5
-    
 }

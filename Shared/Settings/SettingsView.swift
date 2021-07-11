@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @StateObject private var vm = SettingsViewModel()
+    @EnvironmentObject var settings: SettingsConfig
     let formatter = NumberFormatter()
-    
     
     var body: some View {
         
@@ -22,7 +21,7 @@ struct SettingsView: View {
                 Text("Focus Time in Minutes:")
                     .bold()
                 TextField("Focus Time in Minutes",
-                          value: $vm.workTime,
+                          value: $settings.workTime,
                           formatter: formatter)
                     .accessibility(identifier: "Focus Time in Minutes")
                     
@@ -32,7 +31,7 @@ struct SettingsView: View {
                 Text("Break Time in Minutes:")
                     .bold()
                 TextField("Break Time in Minutes",
-                          value: $vm.breakTime,
+                          value: $settings.breakTime,
                           formatter: formatter)
             }
             
@@ -40,7 +39,7 @@ struct SettingsView: View {
                 Text("Number of Rounds:")
                     .bold()
                 TextField("Number of Rounds",
-                          value: $vm.numberOfRounds,
+                          value: $settings.numberOfRounds,
                           formatter: formatter)
                     .accessibility(identifier: "Number of Rounds")
             }

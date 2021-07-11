@@ -21,8 +21,8 @@ class TimerViewModel: ObservableObject {
     var completedTimers: [FocusTimer] = []
     
     
-    init() {
-        loadTimers()
+    init(workTime: Int, breakTime: Int, numOfRounds: Int) {
+        loadTimers(workTime, breakTime, numOfRounds)
         setTimeValues(secondsRemaining: round.first?.secondsRemaining ?? 0)
         timerHeading = "Get Started"
     }
@@ -47,13 +47,13 @@ class TimerViewModel: ObservableObject {
         timer?.invalidate()
     }
     
-    func loadTimers() {
-        round = [FocusTimer(type: .work, secondsRemaining: 5, status: .pending),
-                FocusTimer(type: .rest, secondsRemaining: 3, status: .pending),
-                FocusTimer(type: .work, secondsRemaining: 5, status: .pending),
-                FocusTimer(type: .rest, secondsRemaining: 3, status: .pending),
-                FocusTimer(type: .work, secondsRemaining: 5, status: .pending),
-                FocusTimer(type: .rest, secondsRemaining: 7, status: .pending)
+    func loadTimers(_ workTime: Int, _ breakTime: Int, _ numOfRounds: Int) {
+        round = [FocusTimer(type: .work, secondsRemaining: Double(workTime * 60), status: .pending),
+                FocusTimer(type: .rest, secondsRemaining: Double(breakTime * 60), status: .pending),
+                FocusTimer(type: .work, secondsRemaining: Double(workTime * 60), status: .pending),
+                FocusTimer(type: .rest, secondsRemaining: Double(breakTime * 60), status: .pending),
+                FocusTimer(type: .work, secondsRemaining: Double(workTime * 60), status: .pending),
+                FocusTimer(type: .rest, secondsRemaining: Double(breakTime * 60), status: .pending)
             ]
     }
     

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TimerView: View {
-    @StateObject private var vm = TimerViewModel()
+    @EnvironmentObject var timerSettings: SettingsConfig
+    @StateObject var vm: TimerViewModel
     @State private var showSettingsView = false
 
     var body: some View {
@@ -42,7 +43,9 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView()
+        TimerView(vm: TimerViewModel(workTime: 5,
+                                     breakTime: 3,
+                                     numOfRounds: 3))
     }
 }
 

@@ -9,11 +9,14 @@ import SwiftUI
 
 struct SidebarView: View {
     @State var state: Screen? = Screen.timer
+    @EnvironmentObject var settings: SettingsConfig
     
     var body: some View {
         List {
             NavigationLink(
-                destination: TimerView(),
+                destination: TimerView(vm: TimerViewModel(workTime: settings.workTime,
+                                                      breakTime: settings.breakTime,
+                                                      numOfRounds: settings.numberOfRounds)),
                 tag: Screen.timer,
                 selection: $state,
                 label: { Text("Timer") }
